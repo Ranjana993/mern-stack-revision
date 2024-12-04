@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url("https://i0.wp.com/picjumbo.com/wp-content/uploads/romantic-tropical-beach-with-villa-and-palms-during-beautiful-sunset-free-photo.jpg?w=2210&quality=70");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.login_wrapper {
+  background: rgba(8, 0, 0, 0.411);
+  width: 50%;
+  height: 60%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.remember_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+}
+
+button {
+  background-color: green;
+  width: 20%;
+  padding: 15px;
+  margin: auto;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+
+  /* For tablets */
+  .login_wrapper {
+    width: 70%;
+    height: 50%;
+  }
+
+  .remember_details {
+    width: 70%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 70%;
+  }
+
+  button {
+    width: 30%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* For smaller tablets and large mobile devices */
+  .login_wrapper {
+    width: 80%;
+    height: 65%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+  }
+
+  .remember_details {
+    width: 70%;
+  }
+
+  button {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* For mobile devices */
+  .login_wrapper {
+    width: 90%;
+    height: 60%;
+  }
+
+  .remember_details {
+    width: 70%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
