@@ -20,7 +20,6 @@
 }
 
 nav {
-  width: 100%;
   background-color: #0F0F0F;
   display: flex;
   justify-content: space-between;
@@ -29,6 +28,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+
 }
 
 .whole_wrapper {
@@ -217,7 +217,6 @@ nav {
 
 .cards {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -267,7 +266,7 @@ nav {
 .membership-cards {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  /* align-items: center; */
   gap: 20px;
   width: 100%;
 }
@@ -555,67 +554,3 @@ h1 {
 .help_center_a {
   color: #1e90ff;
 }
-
-
-
-/* !RESPONSIVE DESIGNS STARTS FROM HERE.... */
-/* @media (min-width: 0px) {
-  .cards {
-    flex-direction: column;
-    gap: 12px;
-    padding: 2rem;
-  }
-
-  .featured_cards {
-    align-items: start;
-    flex-direction: column;
-    width: 20%;
-    margin: auto;
-    margin-top: 4rem;
-  }
-
-  .membership-cards {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .membership-card {
-    max-width: 500px;
-    width: 90%;
-    min-height: 250px;
-    background: #212121;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 1rem;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-  }
-}
-
-@media (min-width: 576px) {
-
-}
-
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
-}
-
-@media (min-width: 1400px) {
-
-} */
