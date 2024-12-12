@@ -559,7 +559,7 @@ h1 {
 
 
 /* !RESPONSIVE DESIGNS STARTS FROM HERE.... */
-/* @media (min-width: 0px) {
+@media (min-width: 769px) {
   .cards {
     flex-direction: column;
     gap: 12px;
@@ -618,4 +618,4 @@ h1 {
 
 @media (min-width: 1400px) {
 
-} */
+}
