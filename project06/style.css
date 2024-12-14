@@ -536,87 +536,75 @@ nav {
 }
 
 /*! footer */
-.footer {
-  padding: 40px 20px;
-  background-color: #121212;
-  text-align: center;
+footer {
+  background: #111B21;
+  color: white;
+  padding: 3rem;
+}
+
+.footer_logo>.btn {
+  margin-top: 4rem;
+}
+
+.footer_items {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.footer_list_items {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer_list_items {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
-.footer .logo {
-  font-size: 24px;
-  font-weight: bold;
+.footer_list_items>div>p {
+  line-height: 3rem;
+  font-size: 18px;
+}
+
+.footer_policy {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2rem;
 }
 
-.footer .logo img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.footer .download-btn {
-  background-color: #25d366;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-
-.footer .links {
+.footer_policy_content {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  justify-content: space-evenly;
+  gap: 3rem;
 }
 
-.footer .links ul {
-  list-style: none;
-  padding: 0 15px;
-}
-
-.footer .links ul li {
-  margin: 5px 0;
-}
-
-.footer .links ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-}
-
-.footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.footer .social-icons a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-}
-
-.footer .bottom {
-  margin-top: 30px;
-  font-size: 12px;
-  color: #999;
-}
-
-.footer .bottom .language-selector {
-  margin-top: 10px;
+select {
+  -webkit-appearance: none;
+  border-radius: 30px;
+  color: white;
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
+  border: 1px solid white;
+  padding: 20px 90px 20px 30px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.socialMedia {
+  /*1C1E21*/background-color: #1C1E21;
+  padding: 12px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 12px;
+  border: 1px solid white;
 }

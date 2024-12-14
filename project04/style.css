@@ -23,7 +23,6 @@ h1 {
 
 .store_wrapper {
   width: 70%;
-  /* background: purple; */
 }
 
 .cards {
@@ -45,6 +44,7 @@ h1 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  display: block;
 }
 
 .imgage {
@@ -65,4 +65,146 @@ h1 {
 .cart {
   width: 10%;
   height: 20%;
+}
+
+@media screen and (max-width:320px) {
+  .store_wrapper {
+    width: 90%;
+  }
+
+  .title {
+    color: red;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+  }
+
+  .cart {
+    width: 20%;
+    height: 15%;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+
+@media screen and (min-width:320px) and (max-width:550px) {
+  .store_wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    padding: 15px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .title {
+    color: red;
+    font-weight: bolder;
+    margin-bottom: 8px;
+  }
+
+  .cart {
+    width: 20%;
+    height: 15%;
+    margin-top: 1rem;
+  }
+
+  .card {
+    width: 98%;
+    min-height: 150px;
+    display: flex;
+    padding: 1rem;
+    padding: 3px;
+    flex-direction: row;
+  }
+
+
+  .imgage {
+    width: 50%;
+  }
+
+  .card_info {
+    flex-direction: column;
+    padding: 6px;
+    margin-left: 1rem;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:550px) {
+  .store_wrapper {
+    width: 100%;
+  }
+
+  .card_info {
+    flex-direction: column;
+    padding: 6px;
+    margin-left: 2rem;
+    align-items: start;
+    /* gap: 1.2rem; */
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: red;
+  }
+
+  .cart {
+    width: 20%;
+    height: 15%;
+  }
+
+  .cards {
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width:551px) and (max-width:769px) {
+  .card {
+    width: 30%;
+    min-height: 150px;
+    padding: 8px;
+  }
+
+  .store_wrapper {
+    width: 100%;
+  }
+
+  .cards {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .card {
+    width: 30%;
+    min-height: 150px;
+    padding: 8px;
+  }
+
+  .store_wrapper {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+    color: red;
+  }
+
+  .cards {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: row;
+  }
 }
