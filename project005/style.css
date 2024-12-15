@@ -20,7 +20,6 @@
 }
 
 nav {
-  width: 100%;
   background-color: #0F0F0F;
   display: flex;
   justify-content: space-between;
@@ -29,6 +28,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+
 }
 
 .whole_wrapper {
@@ -199,7 +199,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* padding: 2rem; */
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -217,7 +217,6 @@ nav {
 
 .cards {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -267,7 +266,6 @@ nav {
 .membership-cards {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   gap: 20px;
   width: 100%;
 }
@@ -364,7 +362,7 @@ nav {
   margin-top: 2rem;
 }
 
-.featured_cards {
+/* .featured_cards {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -372,8 +370,35 @@ nav {
   width: 80%;
   margin: auto;
   margin-top: 4rem;
+} */
+
+.featured_cards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /* Default layout for larger screens */
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
 }
 
+.featured_cards .right,
+.featured_cards .left {
+  flex: 1;
+  /* Allow equal space for both sections */
+}
+
+.videos {
+  max-width: 100%;
+  height: auto;
+}
+
+.para {
+  font-size: 1.3rem;
+  color: rgb(159, 156, 156);
+  font-weight: 500;
+}
 
 .featured_cards h3 {
   font-size: 3rem;
@@ -382,11 +407,12 @@ nav {
 
 
 /*! music container */
-
 .music_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  /* Allows wrapping for smaller screens */
   max-width: 1200px;
   width: 100%;
   border-radius: 1.2rem;
@@ -410,7 +436,6 @@ nav {
   align-content: start;
   width: 130px;
   padding: 4px 0px;
-  /* margin-left: -3.5rem; */
 }
 
 .left-section h1 {
@@ -432,6 +457,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 50%;
 }
 
 .music-card {
@@ -556,66 +582,224 @@ h1 {
   color: #1e90ff;
 }
 
-
-
-/* !RESPONSIVE DESIGNS STARTS FROM HERE.... */
-@media (min-width: 769px) {
-  .cards {
-    flex-direction: column;
-    gap: 12px;
-    padding: 2rem;
+@media screen and (max-width:480px) {
+  body {
+    background: pink;
   }
 
-  .featured_cards {
-    align-items: start;
-    flex-direction: column;
-    width: 20%;
-    margin: auto;
-    margin-top: 4rem;
+  .whole_wrapper {
+    width: 100%;
+  }
+
+  .featured_card_wrapper>h1 {
+    font-size: 2rem;
+    padding: 20px 0px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .videos {
+    width: 70%;
+    height: 70%;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
   }
 
   .membership-cards {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
   }
 
   .membership-card {
+    width: 92%;
     max-width: 500px;
-    width: 90%;
     min-height: 250px;
-    background: #212121;
+  }
+
+  .restriction_wrapper {
+    width: 100%;
+  }
+
+  .cards {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+  }
+
+  .card>p {
+    font-size: 12px;
+    width: 70%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  .center_wrapper {
+    width: 60%;
+    display: none;
+  }
+
+  .left_wrapper_yticon {
+    display: none;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .button {
+    width: 80%;
+  }
+
+  .subtitle,
+  .price {
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 15px;
+  }
+
+  .membership-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .membership-card a {
+    font-size: 1rem;
+    width: 90%;
+    padding: 12px;
+  }
+
+  .featured_cards {
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    /* Stack elements vertically */
+  }
+
+  .featured_cards h3 {
+    font-size: 1.2rem;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .videos {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured_cards p {
+    font-size: 12px;
+    color: rgb(159, 156, 156);
+    font-weight: 500;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+
+  /* videos section  */
+  .music_container {
+    flex-direction: column;
     padding: 1rem;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    margin-top: 1rem;
+  }
+
+  .left-section {
+    order: -1;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .music-card {
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .music-card img {
+    border-radius: 1.2rem;
+  }
+
+  .left-section {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .left-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .left-section p {
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: start;
   }
 }
 
-@media (min-width: 576px) {
+/* premium_wrapper */
 
+
+.premium_wrapper>h1 {
+  font-size: 2rem;
 }
 
-@media (min-width: 768px) {
-
+.premium_wrapper>p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: -1rem;
 }
 
-@media (min-width: 992px) {
-
+.premium_wrapper>button {
+  width: 60%;
+  font-size: 16px;
 }
 
-@media (min-width: 1200px) {
-
+/* !faq */
+.faq-container {
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
 }
 
-@media (min-width: 1400px) {
+h1 {
+  font-size: 2rem;
+}
 
+.faq-item {
+  margin-bottom: 5px;
+}
+
+.faq-question {
+  font-size: 1rem;
+}
+
+.faq-answer {
+  font-size: 14px;
+  line-height: 1.2rem;
+  font-weight: 400;
+}
 }
