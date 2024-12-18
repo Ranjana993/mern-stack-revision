@@ -9,244 +9,286 @@
 </head>
 
 <body class="overflow-x-hidden">
+
   <!-- navbar -->
-  <nav class="w-screen flex items-center justify-center bg-white  shadow-2xl h-[5.5rem]  ">
-    <div class="flex items-center justify-around  w-[82%] ">
-      <div>
-        <img src="./assets/asset 0.svg" alt="paytm logo">
-      </div>
-      <div class="flex gap-8">
+  <nav class="w-screen flex items-center justify-center bg-white  shadow-2xl h-[5.5rem] ">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="./assets/asset 0.svg" alt="paytm logo" class="h-8">
+    </div>
+
+    <!-- Hamburger Menu (Visible on small screens) -->
+    <button id="menu-toggle" class="block sm:hidden text-gray-600 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <div id="nav-links" class="hidden sm:flex flex-col sm:flex-row items-center gap-8 w-full bg-white sm:w-auto">
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
         <p class="text-lg font-semibold">Paytm for Consumer</p>
-        <p class="text-lg font-semibold">Paytm for Buisness</p>
-        <p class="text-lg font-semibold">Invevstor Relations</p>
+        <p class="text-lg font-semibold">Paytm for Business</p>
+        <p class="text-lg font-semibold">Investor Relations</p>
         <p class="text-lg font-semibold">Company</p>
         <p class="text-lg font-semibold">Career</p>
       </div>
-      <button class="flex justify-center gap-3 items-center pl-5 pr-1 py-1 bg-lightBlue rounded-full">
-        <span> SignIn </span> <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+      <button class="flex justify-center gap-3 items-center pl-5 pr-1 py-1 bg-lightBlue rounded-full mt-4 sm:mt-0">
+        <span>Sign In</span>
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="17" cy="17" r="17" fill="#002970" />
           <circle cx="17" cy="14.7331" r="7.93333" fill="white" />
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M4.07898 28.048C6.58399 23.4894 11.4312 20.3999 16.9999 20.3999C22.5687 20.3999 27.4159 23.4894 29.9209 28.048C26.8029 31.691 22.1711 33.9999 16.9999 33.9999C11.8288 33.9999 7.19693 31.691 4.07898 28.048Z"
             fill="white" />
         </svg>
-
       </button>
     </div>
   </nav>
 
 
   <!-- section 1 Paytm travel  -->
-  <section class="bg-[#DFF4FD] w-screen  min-h-96  pt-8 flex flex-col items-center overflow-x-hidden">
-    <!-- top content -->
-    <div class="w-[80%]  flex justify-between items-center py-4">
-      <div class="flex justify-center items-center gap-8">
+  <section class="bg-[#DFF4FD] w-screen pt-8 flex flex-col items-center overflow-x-hidden">
+    <!-- Top Content -->
+    <div class="w-[90%] sm:w-[80%] flex flex-wrap justify-between items-center py-4 gap-4">
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
         <div class="flex justify-center items-center gap-1">
-          <div>
-            <img src="./assets/asset 2.svg" alt="">
-          </div>
+          <img src="./assets/asset 2.svg" alt="" class="w-6 sm:w-8">
           <div class="text-md">Flights</div>
         </div>
         <div class="flex justify-center items-center gap-1">
-          <div>
-            <img src="./assets/asset 3.svg" alt="">
-          </div>
+          <img src="./assets/asset 3.svg" alt="" class="w-6 sm:w-8">
           <div class="text-md">Bus</div>
         </div>
         <div class="flex justify-center items-center gap-1">
-          <div>
-            <img class="w-6" src="./assets/asset 4.svg" alt="">
-          </div>
+          <img src="./assets/asset 4.svg" alt="" class="w-6 sm:w-8">
           <div class="text-md">Trains</div>
         </div>
         <div class="flex justify-center items-center gap-1">
-          <div>
-            <img src="./assets/asset 5.svg" alt="">
-          </div>
+          <img src="./assets/asset 5.svg" alt="" class="w-6 sm:w-8">
           <div class="text-md">Intl. Flights</div>
         </div>
       </div>
       <div>
-        <img class="w-28" src="./assets/Paytm_Travel_Logo.svg">
+        <img class="w-20 sm:w-28" src="./assets/Paytm_Travel_Logo.svg" alt="Travel Logo">
       </div>
     </div>
-    <!-- card -->
-    <div class="bg-white  rounded-xl w-[81%] h-[70%] border border-gray-300 px-5 py-4 ">
-      <div class="flex gap-4 text-lg justify-start items-center">
-        <input type="radio" /> <label for="One Way" class="text-[17px] font-medium">One Way</label>
-        <input type="radio" /> <label for="Rounded Trip" class="text-[17px] font-medium">Rounded Trip</label>
+
+    <!-- Card Section -->
+    <div class="bg-white rounded-xl w-[90%] sm:w-[81%] border border-gray-300 px-5 py-4">
+      <!-- Trip Options -->
+      <div class="flex flex-wrap gap-4 text-lg justify-start items-center">
+        <div class="flex items-center gap-2">
+          <input type="radio" id="one-way" />
+          <label for="one-way" class="text-[17px] font-medium">One Way</label>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="radio" id="round-trip" />
+          <label for="round-trip" class="text-[17px] font-medium">Round Trip</label>
+        </div>
       </div>
-      <div class="flex justify-evenly gap-2  items-center mt-4 ">
-        <div class="w-[15.5%] border-b-2 pb-2">
+
+      <!-- Search Bar -->
+      <div class="flex flex-wrap justify-between gap-4 items-center mt-4">
+        <div class="w-full sm:w-[15%] border-b-2 pb-2">
           <span class="text-gray-400 text-sm">From</span><br>
           <span class="font-bold text-lg">DEL</span><br>
           <span class="text-xs">Delhi</span>
         </div>
-        <div class="w-[15.5%] flex items-center justify-center gap-6">
-          <div>
-            <img class="mt-8" src="./assets/asset 6.svg" alt=""><br>
-          </div>
-          <div class=" border-b-2  pb-2">
-            <span class="text-gray-400  text-sm">To</span><br>
+        <div class="w-full sm:w-[15%] flex items-center justify-center gap-4">
+          <img src="./assets/asset 6.svg" alt="" class="w-6">
+          <div class="border-b-2 pb-2">
+            <span class="text-gray-400 text-sm">To</span><br>
             <span class="font-bold text-lg">BOM</span><br>
             <span class="text-xs">Mumbai Maharashtra</span>
           </div>
-
         </div>
-        <div class="w-[10%] border-b-2 pb-2">
-          <span class="text-gray-400  text-sm">Departure Date</span><br>
+        <div class="w-full sm:w-[20%] border-b-2 pb-2">
+          <span class="text-gray-400 text-sm">Departure Date</span><br>
           <span class="font-bold text-lg">20 Dec 24</span><br>
           <span class="text-xs">Friday</span>
         </div>
-        <div class="border-b-2 pb-2 flex flex-col pt-4  items-start justify-end gap-1">
-          <span></span>
-          <span class="font-bold text-xl mt-4 text-lightBlue ">+Add Return</span>
-          <span class="text-xs">Save More</span>
+        <div class="w-full sm:w-[20%] border-b-2 pb-2">
+          <span class="font-bold text-lg text-lightBlue cursor-pointer">+ Add Return</span><br>
+          <span class="text-xs text-gray-500">Save More</span>
         </div>
-        <div class="w-[15.5%] border-b-2 pb-2">
-          <span class="text-gray-400">Travellers & Cabin Class</span><br>
+        <div class="w-full sm:w-[20%] border-b-2 pb-2">
+          <span class="text-gray-400 text-sm">Travellers & Cabin Class</span><br>
           <span class="font-bold text-lg">Traveller</span><br>
-          <span>Economy</span>
+          <span class="text-xs">Economy</span>
         </div>
-        <!-- <div class="w-[20%] ml-12"> -->
-        <button class="bg-lightBlue text-white px-9 rounded-lg py-4 font-bold">Search Flight</button>
-        <!-- </div> -->
+        <button class="w-full sm:w-auto bg-lightBlue text-white px-6 py-3 rounded-lg font-bold">
+          Search Flights
+        </button>
       </div>
-      <div class="mt-4 flex items-center justify-start px-6 gap-6">
+
+      <!-- Special Fares -->
+      <div class="mt-4 flex flex-wrap items-center justify-start gap-4">
         <p class="text-gray-500">Special Fares (optional)</p>
-        <p
-          class="border border-gray-300 p-1.5 rounded-full px-5 text-gray-500 hover:bg-[#DFF4FD] cursor-pointer hover:text-black">
-          Armed Forces</p>
-        <p
-          class="border border-gray-300 p-1.5 rounded-full px-5 text-gray-500 hover:bg-[#DFF4FD] cursor-pointer hover:text-black">
-          Student</p>
-        <p
-          class="border border-gray-300 p-1.5 rounded-full px-5 text-gray-500 hover:bg-[#DFF4FD] cursor-pointer hover:text-black">
-          Senior Citizen</p>
+        <div
+          class="border border-gray-300 p-2 rounded-full text-sm text-gray-500 hover:bg-[#DFF4FD] hover:text-black cursor-pointer">
+          Armed Forces
+        </div>
+        <div
+          class="border border-gray-300 p-2 rounded-full text-sm text-gray-500 hover:bg-[#DFF4FD] hover:text-black cursor-pointer">
+          Student
+        </div>
+        <div
+          class="border border-gray-300 p-2 rounded-full text-sm text-gray-500 hover:bg-[#DFF4FD] hover:text-black cursor-pointer">
+          Senior Citizen
+        </div>
       </div>
     </div>
 
-
-    <div class="flex justify-center items-center gap-7 py-8 mt-4">
-      <div class="w-[25%]">
-        <img class="w-full rounded-lg" src="./assets/asset 7.avif" alt="">
+    <!-- Image Section -->
+    <div class="flex flex-wrap justify-center items-center gap-4 py-8 mt-4">
+      <div class="w-[90%] sm:w-[25%]">
+        <img class="w-full rounded-lg" src="./assets/asset 7.avif" alt="Travel Image 1">
       </div>
-      <div class="w-[25%]">
-        <img class="w-full  rounded-lg" src="./assets/asset 8.avif" alt="">
+      <div class="w-[90%] sm:w-[25%]">
+        <img class="w-full rounded-lg" src="./assets/asset 8.avif" alt="Travel Image 2">
       </div>
-      <div class="w-[25%]">
-        <img class="w-full  rounded-lg" src="./assets/asset 9.avif" alt="">
+      <div class="w-[90%] sm:w-[25%]">
+        <img class="w-full rounded-lg" src="./assets/asset 9.avif" alt="Travel Image 3">
       </div>
     </div>
   </section>
+
+
 
   <!-- Recharge & Pay Bills on Paytm. -->
-  <section class="bg-lightBlue w-full h-74  pb-4 text-white flex flex-col justify-center items-center">
-    <div class=" py-8 mt-6 w-[80%] ">
-      <h2 class="text-5xl font-bold text-white text-start py-6 mb-4">Recharge & Pay Bills on Paytm.</h2>
-      <div class="flex items-center gap-4 justify-center">
-        <div class="w-[18%] p-4  hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 15.png" alt="">
-          <p class="text-md font-bold">Recharge</p>
-          <p class="text-md font-bold">Prepaid</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Mobile </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+  <section class="bg-lightBlue w-full pb-4 text-white flex flex-row  sm:flex-col justify-center items-center">
+    <div class="py-8 mt-6 w-[90%] sm:w-[80%]">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-start py-6 mb-4">Recharge & Pay Bills on
+        Paytm.</h2>
+      <div class="flex md:flex-row flex-col items-center gap-4 justify-center">
+        <!-- Card Template -->
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 15.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Recharge</p>
+            <p class="text-sm md:text-md font-bold">Prepaid</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Mobile</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 16.png" alt="">
-          <p class="text-md font-bold">Pay </p>
-          <p class="text-md font-bold">Electricity</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Bill </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 16.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Pay</p>
+            <p class="text-sm md:text-md font-bold">Electricity</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Bill</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 17.png" alt="">
-          <p class="text-md font-bold">Recharge</p>
-          <p class="text-md font-bold">DTH</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Connection </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 17.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Recharge</p>
+            <p class="text-sm md:text-md font-bold">DTH</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Connection</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 18.png" alt="">
-          <p class="text-md font-bold">Book</p>
-          <p class="text-md font-bold">Gas</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Cylinder </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 18.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Book</p>
+            <p class="text-sm md:text-md font-bold">Gas</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Cylinder</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 19.png" alt="">
-          <p class="text-md font-bold">Pay</p>
-          <p class="text-md font-bold">Broadband &</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Landline Bill </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 19.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Pay</p>
+            <p class="text-sm md:text-md font-bold">Broadband &</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Landline Bill</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 20.png" alt="">
-          <p class="text-md font-bold">Pay</p>
-          <p class="text-md font-bold">Education</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Fee </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 20.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Pay</p>
+            <p class="text-sm md:text-md font-bold">Education</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Fees</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-shadowlightblue hover:rounded-md">
-          <img class="w-16" src="./assets/asset 21.png" alt="">
-          <p class="text-md font-bold">All</p>
-          <p class="text-md font-bold">Payment</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Services </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-shadowlightblue hover:rounded-md flex flex-row md:flex-col items-center gap-4 md:gap-0 border border-shadowlightblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 21.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">All</p>
+            <p class="text-sm md:text-md font-bold">Payments</p>
+            <div class="flex ">
+              <p class="text-sm md:text-md font-bold mr-2">Services</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
+
 
 
   <!-- Payments App -->
-  <section class="w-screen py-12 flex items-center justify-end">
-    <div class="w-[90%] flex justify-end items-center">
-      <div class="w-[50%] ml-12 flex flex-col justify-end items-start">
-        <img class="w-20 mb-10" src="./assets/asset 22.avif" alt="">
-        <h1 class="text-6xl font-bold">India's Most-loved Payments App</h1>
-        <p class="text-xl py-4 w-[65%]">Recharge & pay bills, book flights & movie tickets, invest in stocks & mutual
+  <section class="w-screen py-12 flex items-center justify-center lg:justify-end">
+    <div class="w-[90%] flex flex-col lg:flex-row justify-center lg:justify-end items-center">
+      <!-- Left Content -->
+      <div
+        class="w-full lg:w-[50%] ml-0 lg:ml-12 flex flex-col justify-start lg:justify-end items-center lg:items-start text-center lg:text-left">
+        <img class="w-16 lg:w-20 mb-6 lg:mb-10" src="./assets/asset 22.avif" alt="">
+        <h1 class="text-4xl lg:text-6xl font-bold">India's Most-loved Payments App</h1>
+        <p class="text-base lg:text-xl py-4 w-[90%] lg:w-[65%]">Recharge & pay bills, book flights & movie tickets,
+          invest
+          in stocks & mutual
           funds, and do a lot more.</p>
         <button
-          class="bg-black text-white flex  items-center justify-center gap-2 px-8 py-2.5 rounded-full mt-14">Download
-          Paytm App
+          class="bg-black text-white flex items-center justify-center gap-2 px-6 lg:px-8 py-2 rounded-full mt-8 lg:mt-14">
+          Download Paytm App
           <svg width="14" height="16" viewBox="0 0 14 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z"
@@ -259,117 +301,134 @@
           </svg>
         </button>
       </div>
-      <div class="w-[50%]">
-        <img class="w-[78%] float-end" src="./assets/payment.avif" alt="">
+      <!-- Right Content -->
+      <div class="w-full lg:w-[50%] mt-8 lg:mt-0">
+        <img class="w-[90%] lg:w-[78%] float-end mx-auto lg:mx-0" src="./assets/payment.avif" alt="">
       </div>
     </div>
   </section>
+
 
 
   <!-- Book & Buy on Paytm. -->
   <section class="bg-darkBlue w-full h-74  pb-4 text-white flex flex-col justify-center items-center">
     <div class=" py-8 mt-6 w-[80%] ">
       <h2 class="text-5xl font-bold text-white text-start py-6 mb-4">Book & Buy on Paytm.</h2>
-      <div class="flex items-center gap-4 justify-center">
-        <div class="w-[18%] p-4  hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 24.png" alt="">
-          <p class="text-md font-bold">Movie</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Tickets </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+      <div class="flex md:flex-row flex-col items-center gap-4 justify-center">
+        <!-- Card Template -->
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 24.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Movie</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Tickets</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 25.png" alt="">
-          <p class="text-md font-bold">Flight</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Tickets </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 25.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Flight</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Tickets</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 26.png" alt="">
-          <p class="text-md font-bold">Bus</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Tickets </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 26.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Bus</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Tickets</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 27.avif" alt="">
-          <p class="text-md font-bold">Train</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Tickets </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 27.avif" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Train</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Tickets</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 28.png" alt="">
-          <p class="text-md font-bold">International</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Flights </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 28.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">International</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Flights</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 29.png" alt="">
-          <p class="text-md font-bold">Buy</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">Insurance </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
-          </div>
-        </div>
-        <div class="w-[15%] p-4 hover:bg-darkShadowblue hover:rounded-xl">
-          <img class="w-16" src="./assets/asset 30.webp" alt="">
-          <p class="text-md font-bold">Invest</p>
-          <div class="flex flex-row items-center ">
-            <p class="text-md font-bold mr-2">In Stock </p>
-            <svg class="w-2.5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-            </svg>
+        <div
+          class="w-[80%] sm:w-[70%] md:w-[18%] p-4 hover:bg-darkShadowblue hover:rounded-md flex flex-row md:flex-col items-center text-center gap-4 md:gap-0 border border-darkShadowblue md:border-none">
+          <img class="w-24 md:w-16 mb-2" src="./assets/asset 29.png" alt="">
+          <div class="">
+            <p class="text-lg md:text-md font-bold">Buy</p>
+            <div class="flex items-center justify-center">
+              <p class="text-sm md:text-md font-bold mr-2">Insurance</p>
+              <svg class="w-3" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
 
   <!-- Paytm Payments  -->
 
-  <section class="bg-[#F5F7FA] w-screen py-8 justify-start items-center flex flex-col ">
-    <h1 class="w-[80%] text-5xl text-start font-bold py-10">Paytm Payment Instruments</h1>
-    <div class="w-[80%] bg-white flex justify-end items-center py-12">
-      <div class="w-[40%] ml-12 flex flex-col justify-end items-start">
-        <div class="flex justify-center items-center mb-12">
-          <img class="w-20 " src="./assets/asset 31.png" alt=""> <span class="font-bold text-md ml-2">UPI Money  <br> Transfer</span>
+  <section class="bg-[#F5F7FA] w-screen py-8 flex flex-col items-center">
+    <h1 class="w-[90%] md:w-[80%] text-3xl md:text-5xl text-start font-bold py-6 md:py-10">Paytm Payment Instruments
+    </h1>
+    <div
+      class="w-[90%] md:w-[80%] bg-white flex flex-col-reverse md:flex-row justify-between items-center py-8 md:py-12">
+      <!-- Left Content -->
+      <div class="w-full md:w-[50%] flex flex-col justify-start items-start px-4 md:pl-12">
+        <div class="flex items-center mb-6 md:mb-12">
+          <img class="w-16 md:w-20" src="./assets/asset 31.png" alt="">
+          <span class="font-bold text-sm md:text-md ml-2">UPI Money <br> Transfer</span>
         </div>
-        <h1 class="text-4xl w-[70%] font-bold">Pay anyone directly from your bank account.</h1>
-        <p class="text-lg py-4 w-[70%]">Pay anyone, everywhere. Make contactless & secure payments in-stores or online
-          using Paytm UPI or Directly from your
-          Bank Account. Plus, send & receive money from anyone.</p>
+        <h1 class="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
+          Pay anyone directly from your bank account.
+        </h1>
+        <p class="text-sm md:text-lg mb-6 md:mb-8">
+          Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm UPI or directly
+          from
+          your Bank Account. Plus, send & receive money from anyone.
+        </p>
         <button
-          class="bg-black text-white flex  items-center justify-center gap-2 px-8 py-2.5 rounded-full mt-10">Download
-          Paytm App
+          class="bg-black text-white flex items-center justify-center gap-2 px-6 py-2.5 md:px-8 md:py-3 rounded-full">
+          Download Paytm App
           <svg width="14" height="16" viewBox="0 0 14 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z"
@@ -382,11 +441,364 @@
           </svg>
         </button>
       </div>
-      <div class="w-[50%]">
-        <img class="w-[78%]" src="./assets/asset 32.webp" alt="">
+
+      <!-- Right Content -->
+      <div class="w-full md:w-[50%] flex justify-center items-center px-4 md:px-0">
+        <img class="w-[90%] md:w-[78%]" src="./assets/asset 32.webp" alt="Paytm Illustration">
       </div>
     </div>
   </section>
+
+
+
+  <!-- card option  -->
+  <section class="bg-[#F5F7FA] pb-24 w-screen h-[70%] flex justify-center items-center ">
+    <div class="flex flex-col md:flex-row justify-center items-center w-[100%] md:w-[80%] gap-4">
+      <div class="w-[90%] md:w-[50%] bg-white cursor-pointer rounded-xl pt-24 px-12">
+        <img class="w-40 pb-10" src="./assets/asset 33.png" alt="paytm hdfc bank">
+        <h1 class="text-4xl font-bold">India’s Most <br>Sincere Credit Card</h1>
+        <p class="text-lg pt-2">Paytm SBI Card SELECT - With Intelligent Features & Great Rewards that Never Expire</p>
+        <p class="text-sm text-gray-500">*Paytm Payments Bank does not provide any loan or credit card on the Paytm
+          App.Know more</p>
+        <img class=" w-[85%]" src="./assets/asset 34.webp" alt="paytm hdfc bank">
+      </div>
+      <div class="w-[90%] md:w-[50%] h-[50%] cursor-pointer bg-white rounded-xl pt-24 px-12">
+        <img class="w-40 pb-10" src="./assets/asset 35.png" alt="paytm hdfc bank">
+        <h1 class="text-4xl font-bold">India’s Most <br>Sincere Credit Card</h1>
+        <p class="text-lg pt-2">Paytm SBI Card SELECT - With Intelligent Features & Great Rewards that Never Expire</p>
+        <p class="text-sm text-gray-500">*Paytm Payments Bank does not provide any loan or credit card on the Paytm
+          App.Know more</p>
+        <img class=" w-full" src="./assets/asset 36.webp" alt="paytm hdfc bank">
+      </div>
+    </div>
+  </section>
+
+  <!-- Paytm Insurance -->
+  <section class="flex items-start justify-center py-12">
+    <div class="flex items-center justify-between w-[80%] gap-12">
+      <div class="w-[50%]">
+        <img class="w-36 mb-16" src="./assets/asset 37.webp" alt="paytm insurance">
+        <h1 class="text-4xl font-bold">Insurance made easy.</h1>
+        <p class="text-xl mt-6 font-semibold w-[80%]">Buying insurance does not have to be tedious, time-consuming &
+          confusing. Paytm Insurance removes the worry of getting
+          insured by making it simple, convenient & easy-to-understand.</p>
+        <button class="bg-btnColor text-white p-3 mt-12 rounded-full px-12"> Learn More </button>
+      </div>
+      <div class="w-[50%]">
+        <img class="w-[80%] float-end" src="./assets/asset 38.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Build Long-term Wealth & Achieve your Goals. -->
+  <section
+    class="bg-[#F5F7FA] bg-hero-pattern w-screen bg-cover bg-center min-h-[90%] py-20 flex items-center justify-center">
+    <div class="flex  w-[80%] justify-center items-center">
+      <div class="w-[50%]">
+        <img class="w-[80%]" src="./assets/asset 40.webp" alt="">
+      </div>
+      <div class="w-[45%]">
+        <img class="w-36 py-12" src="./assets/asset 39.webp" alt="">
+        <h1 class="text-5xl font-bold">Build Long-term Wealth & Achieve your Goals.</h1>
+        <p class="text-xl mt-2">Investing on Paytm Money is transparent, low-cost and commission-free. Buy stocks &
+          mutual funds that can help you
+          create wealth & realise your dreams.</p>
+        <button class="bg-btnColor text-white p-4 mt-12 rounded-full px-12">Learn More </button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Financial Services by Paytm -->
+  <section class="w-screen flex items-center justify-center">
+    <div class="w-[80%]">
+      <h1 class="text-5xl px-8 py-12 font-bold">Financial Services by Paytm</h1>
+      <div class="flex justify-center gap-12">
+        <div class="w-[50%]">
+          <img class="w-[30%]" src="./assets/asset 42.png" alt="">
+          <h2 class="text-4xl py-8 mt-4 font-bold w-[85%]">Get a Personal Loan in 2 Minutes.</h2>
+          <p class="font-semibold w-[85%] text-xl">Paytm offers India’s quickest multi-purpose, hassle-free loan. It is
+            100% digital, transparent and paperless.</p>
+          <button class="bg-btnColor text-white p-4 mt-12 rounded-full px-12">Learn More </button>
+        </div>
+        <div class="w-[40%]">
+          <img src="./assets/asset 43.avif" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Business Services by Paytm -->
+  <!-- !  1st card section -->
+  <section class="w-screen flex flex-col mb-12 items-center justify-center">
+    <h1 class="text-5xl w-[80%] py-12 font-bold">Business Services by Paytm</h1>
+    <div class="w-[80%] py-20 bg-[#F5F7FA]">
+      <div class="flex items-center justify-center gap-12">
+        <div class="w-[50%] px-24">
+          <h2 class="text-4xl py-8 mt-4 font-bold w-[75%]">Accept payments online with ease</h2>
+          <p class="font-semibold w-[85%] text-xl">Grow your business with the payment gateway that powers India’s
+            largest brands and even the Paytm App</p>
+          <button class="bg-btnColor text-white p-4 mt-12 rounded-full px-12">Learn More </button>
+        </div>
+        <div class="w-[50%]">
+          <img class="float-end w-[80%]" src="./assets/asset 44.avif" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- !  2nd card section -->
+  <section class="w-screen flex flex-col mb-12 items-center justify-center">
+    <div class="w-[80%] py-20 bg-[#F5F7FA]">
+      <div class="flex items-center justify-center gap-12">
+        <div class="w-[50%] px-24">
+          <h2 class="text-4xl py-8 mt-4 font-bold w-[85%]">In-shop payments powered by Paytm.</h2>
+          <p class="font-semibold w-[85%] text-xl">Millions of small & big businesses use Paytm to accept payments
+            anywhere any time with a wide range of solutions for all
+            kind of merchants</p>
+          <button class="bg-btnColor text-white p-4 mt-12 rounded-full px-12">Learn More </button>
+        </div>
+        <div class="w-[50%]">
+          <img class="float-end w-[80%]" src="./assets/asset 45.avif" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Business Tools to help your business grow -->
+  <section class="w-screen flex  flex-col justify-center items-center">
+    <div class="w-[80%] px-4">
+      <h1 class="text-5xl w-[45%] font-bold py-12">Business Tools to help your business grow</h1>
+    </div>
+    <div class="flex py-4 w-[80%] px-4 justify-evenly  items-center gap-4">
+      <div class="w-[25%] p-4">
+        <img class="w-[95%]" src="./assets/asset 46.webp" alt="">
+        <h2 class="text-3xl font-bold py-2">POS Billing <br> Software</h2>
+        <p class="py-4 text-xl">Say Hello to Smart Retail Business Management</p>
+        <a class="font-bold" href="#">Learn More</a>
+      </div>
+      <div class="w-[25%] p-4">
+        <img class="w-[95%]" src="./assets/asset 48.webp" alt="">
+        <h2 class="text-3xl font-bold py-2">Advertise on<br> Paytm</h2>
+        <p class="py-4 text-xl">Everything you need to manage your business on your phone</p>
+        <a class="font-bold" href="#">Learn More</a>
+      </div>
+      <div class="w-[25%] p-4">
+        <img class="w-[95%]" src="./assets/asset 49.webp" alt="">
+        <h2 class="text-3xl font-bold py-2">Business<br> Khata</h2>
+        <p class="py-4 text-xl">Grow your business by advertising on India’s largest mobile business</p>
+        <a class="font-bold" href="#">Learn More</a>
+      </div>
+      <div class="w-[25%] p-4">
+        <img class="w-[95%]" src="./assets/asset 50.webp" alt="">
+        <h2 class="text-3xl font-bold py-2">POS Billing <br> Software</h2>
+        <p class="py-4 text-xl">SManaging Khata made easy</p>
+        <a class="font-bold" href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paytm Money -->
+
+  <section class="w-screen flex justify-center items-center py-20">
+    <div class="w-[80%] flex gap-6 ">
+      <div class="w-[19%] px-10">
+        <img class="w-[90%] ml-6 mb-4" src="./assets/asset 51.webp" alt="">
+        <p>Get started on wealth creation journey with Zero brokerage fee & no hidden charges.</p>
+        <p class="pt-4 font-bold text-lg text-lightBlue" href="#">Learn More</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-3 rounded-xl">
+        <img class="rounded-xl" src="./assets/asset 52.webp" alt="">
+        <p class="text-white text-lg py-4 text-center font-bold">Invest in Stocks</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-4 rounded-xl">
+        <img class="rounded-xl" src="./assets/asset 53.webp" alt="">
+        <p class="text-white text-lg py-4 text-center font-bold">Apply for IPO</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-4 rounded-xl">
+        <img class="rounded-xl" src="./assets/asset 54.webp" alt="">
+        <p class="text-white text-lg py-4 text-center font-bold">Invest in ETFs</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-4 rounded-xl">
+        <img class="rounded-xl" src="./assets/asset 55.webp" alt="">
+        <p class="text-white text-lg py-4 text-center font-bold">Buy Gold</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-4 rounded-xl">
+        <img class="rounded-xl" src="./assets/asset 56.webp" alt="">
+        <p class="text-white text-lg py-4 text-center font-bold">Invest in Mutual Funds </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- section 2 -->
+  <section class="w-screen flex justify-center items-center py-20">
+    <div class="w-[80%] flex gap-6 ">
+      <div class="w-[19%] px-10">
+        <img class="w-[90%] ml-6 mb-4" src="./assets/asset 57.webp" alt="">
+        <p>Get started on wealth creation journey with Zero brokerage fee & no hidden charges.</p>
+        <p class="pt-4 font-bold text-lg text-lightBlue" href="#">Learn More</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-3 py-12 rounded-xl flex justify-center flex-col">
+        <img class="rounded-xl w-[50%]" src="./assets/asset 58.webp" alt="">
+        <p class="text-white text-lg py-4">100% Refund </p>
+        <p class="text-sm text-white">With Paytm's Cancellation Protect </p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-3 py-12 rounded-xl flex justify-center flex-col">
+        <img class="rounded-xl w-[50%]" src="./assets/asset 59.webp" alt="">
+        <p class="text-white text-lg py-4">Sanitised Bus Options With TravelSafe+</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-3 py-12 rounded-xl flex justify-center flex-col">
+        <img class="rounded-xl w-[50%]" src="./assets/asset 60.avif" alt="">
+        <p class="text-white text-lg py-4">Hassle Free Train Ticket Bookings</p>
+      </div>
+      <div class="w-[13%] bg-lightBlue p-3 py-12 rounded-xl flex justify-s flex-col">
+        <img class="rounded-xl w-[50%]" src="./assets/asset 61.webp" alt="">
+        <p class="text-white text-lg py-4">PNR Status Check In Few Simple Clicks</p>
+      </div>
+      <div class="w-[15%] p-3  rounded-xl flex justify-end items-center flex-row">
+        <img class="float-end" src="./assets/asset 14.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+<footer class="w-full h-[900px] large:h-fit bg-bgColor mt-10 flex justify-center items-start ">
+  <div class="min-w-[60%] large:w-full flex flex-col items-center justify-center large:px-7  ">
+    <div class="flex w-full justify-between large:justify-center items-center my-16  ">
+      <div class="flex gap-2 large:hidden ">
+        <p class="w-52 font-semibold text-xl">Download Paytm App to Pay from anywhere</p>
+        <img class="cursor-pointer" src="PaytmAsseests/asset 57.svg" alt="">
+        <img src="PaytmAsseests/asset 58.svg" alt="">
+      </div>
+      <div class="flex gap-5 mr-7">
+        <img class="cursor-pointer" src="PaytmAsseests/asset 59.svg" alt="">
+        <img class="cursor-pointer" src="PaytmAsseests/asset 60.svg" alt="">
+        <img class="cursor-pointer" src="PaytmAsseests/asset 61.svg" alt="">
+      </div>
+    </div>
+    <div class="bg-line w-full h-[1px]"></div>
+    <div class="flex flex-col w-full mt-20 gap-7 large:mt-5 large:mb-16">
+
+      <div class="flex gap-3 items-start large:flex-row-reverse  large:w-full  cursor-pointer">
+        <img class="relative top-1 rotate-[45deg]" src="./assets/asset 61.webp" alt="">
+
+        <div class="flex w-full flex-col gap-1">
+          <div class="flex items-end relative">
+            <p class="min-w-fit font-bold text-fontColor ">Investor Relations</p>
+            <div class="bg-line w-full h-[1px] large:absolute large:w-[110%] large:top-56"></div>
+          </div>
+          <div class="flex text-sm mt-5 gap-24  large:flex-col large:gap-2">
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">Home</p>
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">Financials</p>
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">Filings & Press Releases</p>
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">News & Events</p>
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">Corporate Governance</p>
+            <p class="text-smallFontColor hover:text-black transition-all duration-200">Resources</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">More about Paytm</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Company</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Career</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="./assets/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Recharge & pay bills</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Pay Loan EMI, Insurance Premiums & Education Fee</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Book Travel & Entertainment</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Investments & Miscellaneous</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Loans and Credit Cards</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-3  cursor-pointer large:flex-row-reverse">
+        <img src="PaytmAsseests/asset 62.svg" alt="">
+        <div class="relative flex w-full items-end large:flex-col large:items-start gap-1">
+          <p class=" min-w-fit font-bold text-fontColor ">Financial Tools & Calculators</p>
+          <div class="bg-line w-full h-[1px] large:top-10 large:w-[110%] large:absolute"></div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="hidden large:block text-sm mb-16 ">Copyright© 2023 Paytm All rights reserved</div>
+  </div>
+</footer>
+
+
+
+  <!-- JavaScript for toggle -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>

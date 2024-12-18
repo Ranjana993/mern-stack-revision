@@ -9,6 +9,10 @@ module.exports = {
         shadowlightblue:'#00AFE3',
         darkShadowblue:'#0D3E80',
         btnColor:'#003C81'
+      },
+      backgroundImage: {
+        'hero-pattern': "url('./assets/asset 41.avif')",
+        'footer-texture': "url('/img/footer-texture.png')",
       }
     },
   },
