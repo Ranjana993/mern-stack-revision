@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #ba0101bc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.maindiv {
+  background-color: white;
+  width: 60%;
+  min-height: 500px;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #ba0101bc;
+  font-size: 2.6rem;
+  text-transform: capitalize;
+  text-align: center;
+  animation: bounceEffect 2s infinite;
+  -webkit-animation: bounceEffect 2s infinite;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounceEffect {
+
+  0%,100% {
+    transform: translateY(0);
+    color: rgb(227, 3, 3);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    color: #ba0101bc;
+  }
+}
+
+#range {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem 0;
+}
+
+.input_container {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#btn {
+  background: #ba0101bc;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: white;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+#btn:hover {
+  background: #810202d8;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  font-size: 2rem;
+  height: 20px;
+  width: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+#pass_length {
+  font-size: 1.2rem;
+}
+
+#res {
+  padding: 2rem 0 0 0;
+  font-size: 2rem;
+  color: red;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.res_container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#copy-icon {
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+#copy-icon:hover {
+  color: #ba0101bc;
+}
+
+.copy-message {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: green;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices (768px and below) */
+@media (max-width: 768px) {
+  .maindiv {
+    width: 80%;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  #range {
+    height: 3rem;
+  }
+
+  #res {
+    font-size: 1.5rem;
+  }
+
+  .input_container {
+    gap: 2rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .maindiv {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #btn {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  #range {
+    height: 2.5rem;
+  }
+
+  #res {
+    font-size: 1.2rem;
+  }
+
+  .input_container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="checkbox"] {
+    height: 12px;
+    width: 12px;
+  }
+
+  .res_container {
+    flex-direction: column;
+  }
+
+  #copy-icon {
+    font-size: 1.2rem;
+  }
+}
