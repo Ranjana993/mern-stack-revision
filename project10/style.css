@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #003545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main_div {
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 28px 80px 4px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.main_div h1 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #003545;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+  display: flex;
+  margin: 1rem 0px;
+  gap: 0.5rem;
+}
+
+.search input {
+  flex-grow: 1;
+  height: 40px;
+  padding: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search button {
+  background-color: #003545;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.img_container {
+  width: 60%;
+}
+
+.img_container,
+.data {
+  animation: fadeIn 0.5s ease-out;
+  -webkit-animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.img_container h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.img_container p {
+  color: rgb(99, 94, 94);
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0.5rem 0;
+}
+
+.bio_data {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bold {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.profile_btn {
+  background-color: #003545;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main_div {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .main_div h1 {
+    font-size: 2rem;
+  }
+
+  .search input {
+    padding: 0.5rem;
+  }
+
+  .search button {
+    padding: 0.5rem 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .bio_data {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_div {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .main_div h1 {
+    font-size: 1.8rem;
+  }
+
+  .search input {
+    height: 35px;
+  }
+
+  .search button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .img {
+    max-width: 120px;
+  }
+
+  .img_container h3 {
+    font-size: 1.2rem;
+  }
+
+  .bio_data {
+    justify-content: start;
+  }
+}
