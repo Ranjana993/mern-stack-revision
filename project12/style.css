@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/024/669/489/small_2x/mountain-countryside-landscape-at-sunset-dramatic-sky-over-a-distant-valley-green-fields-and-trees-on-hill-beautiful-natural-landscapes-of-the-carpathians-generative-ai-variation-5-photo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  background: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.main>.or {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.search_input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.search_input input {
+  padding: 10px;
+  width: 70%;
+  max-width: 300px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.search_input>button {
+  padding: 10px 15px;
+  background-color: #8d0b41;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.degree {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.city {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.weather {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temperature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
+}
+
+.wind_title,
+.pressure_title,
+.humidity_title {
+  font-size: 1.5rem;
+}
+
+.wind_value,
+.pressure_value,
+.humidity_value {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .degree {
+    font-size: 3rem;
+  }
+
+  .city {
+    font-size: 1.8rem;
+  }
+
+  .wind_title,
+  .pressure_title,
+  .humidity_title {
+    font-size: 1.2rem;
+  }
+
+  .wind_value,
+  .pressure_value,
+  .humidity_value {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .search_input input {
+    width: 80%;
+  }
+
+  .degree {
+    font-size: 2.5rem;
+  }
+
+  .city {
+    font-size: 1.5rem;
+  }
+
+  .temperature {
+    gap: 1.5rem;
+  }
+
+  .wind_title,
+  .pressure_title,
+  .humidity_title {
+    font-size: 1rem;
+  }
+
+  .wind_value,
+  .pressure_value,
+  .humidity_value {
+    font-size: 0.8rem;
+  }
+}
