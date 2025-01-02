@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #234566;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: white;
+  padding: 1rem;
+  width: 70%;
+  min-height: 50%;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 12px 35px 45px;
+  align-items: center;
+  flex-direction: column;
+}
+.main h1 {
+  font-size: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.add_todo {
+  text-align: center;
+  width: 100%;
+}
+form{
+  width: 100%;
+}
+form input {
+  padding: 1rem;
+  width: 60%;
+  border: none;
+  outline: none;
+  border: 1px solid gray;
+}
+.data_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#addTodo {
+  width: 20%;
+  padding: 1rem;
+  background-color: #234566;
+  color: white;
+  border: none;
+  outline: none;
+  font-weight: 800;
+}
+#addTodo:hover {
+  background-color: #072747;
+  cursor: pointer;
+}
+
+#data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+  flex-wrap: wrap; /* Wrap items for smaller screens */
+}
+#data p {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+input[type="checkbox"] {
+  height: 34px;
+  width: 34px;
+}
+#data button {
+  background-color: rgba(183, 5, 5, 0.733);
+  padding: 12px 20px;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+#data button:hover {
+  background-color: rgba(112, 2, 2, 0.984);
+}
+.completed {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .main {
+    width: 90%;
+  }
+  .main h1 {
+    font-size: 3rem;
+  }
+  form input {
+    width: 50%;
+  }
+  #data button {
+  padding: 10px 10px;
+}
+#addTodo {
+  width: 10%;
+  font-weight: 800;
+}
+  #addTodo {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 95%;
+  }
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  form input {
+    width: 50%;
+  }
+    #data button {
+  padding: 10px 10px;
+}
+  #addTodo {
+    width: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 2rem;
+  }
+  form input {
+    width: 50%;
+    padding: 0.8rem;
+  }
+  #addTodo {
+    width: 30%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  #data p {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  input[type="checkbox"] {
+    height: 24px;
+    width: 24px;
+  }
+  #data button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
