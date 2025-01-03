@@ -22,9 +22,9 @@ const getTodos = () => {
 
     // Remove button functionality
     removeBtn.addEventListener("click", () => {
-      todoArr.splice(index, 1); // Remove from array
-      localStorage.setItem("allTodos", JSON.stringify(todoArr)); // Update localStorage
-      getTodos(); // Re-render todos
+      todoArr.splice(index, 1); 
+      localStorage.setItem("allTodos", JSON.stringify(todoArr)); 
+      getTodos(); 
     });
 
     // Mark as completed functionality
